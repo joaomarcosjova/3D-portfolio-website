@@ -13,6 +13,8 @@ Feel free to explore my world of cybersecurity, visualize data breaches, and see
 
 > _Warning: It's not just a portfolio — it's a statement! Be prepared to be amazed._
 
+![preview-image](https://github.com/user-attachments/assets/1f979354-cb43-4372-bd16-4b72cb05dea5)
+
 ---
 
 ### 🧠 Technologies & Tools Used
