@@ -13,6 +13,8 @@ Feel free to explore my world of cybersecurity, visualize data breaches, and see
 
 > _Warning: It's not just a portfolio — it's a statement! Be prepared to be amazed._
 
+![preview-image](https://github.com/user-attachments/assets/1f979354-cb43-4372-bd16-4b72cb05dea5)
+
 ---
 
 ### 🧠 Technologies & Tools Used
@@ -72,7 +74,7 @@ To get a local copy up and running, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/cybersecurity-portfolio.git
+   git clone https://github.com/joaomarcosjova/3D-portfolio-website.git
    ```
 
 2. **Install dependencies:**
@@ -105,7 +107,7 @@ Special thanks to the following tools and libraries that made this project possi
 
 Feel free to reach out if you have any questions or just want to connect!
 
-**Email:** your-email@example.com  
-**LinkedIn:** [Your LinkedIn](https://www.linkedin.com/in/your-profile)  
-**GitHub:** [Your GitHub](https://github.com/your-username)
+**Email:** marcosjova3@gmail.com  
+**LinkedIn:** [Your LinkedIn](https://www.linkedin.com/in/joaomarcosjova)  
+
 
