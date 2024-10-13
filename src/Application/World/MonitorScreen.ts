@@ -52,9 +52,9 @@ export default class MonitorScreen extends EventEmitter {
         // Create screen
         this.initializeScreenEvents();
         this.createIframe();
-        const maxOffset = this.createTextureLayers();
-        this.createEnclosingPlanes(maxOffset);
-        this.createPerspectiveDimmer(maxOffset);
+        // const maxOffset = this.createTextureLayers();
+        // this.createEnclosingPlanes(maxOffset);
+        // this.createPerspectiveDimmer(maxOffset);
     }
 
     initializeScreenEvents() {
@@ -258,75 +258,76 @@ export default class MonitorScreen extends EventEmitter {
      * Creates the texture layers for the computer screen
      * @returns the maximum offset of the texture layers
      */
-    createTextureLayers() {
-        const textures = this.resources.items.texture;
 
-        this.getVideoTextures('video-1');
-        this.getVideoTextures('video-2');
+    // createTextureLayers() {
+        // const textures = this.resources.items.texture;
+
+        // this.getVideoTextures('video-1');
+        // this.getVideoTextures('video-2');
 
         // Scale factor to multiply depth offset by
-        const scaleFactor = 4;
+        // const scaleFactor = 4;
 
         // Construct the texture layers
-        const layers = {
-            smudge: {
-                texture: textures.monitorSmudgeTexture,
-                blending: THREE.AdditiveBlending,
-                opacity: 0.12,
-                offset: 24,
-            },
-            innerShadow: {
-                texture: textures.monitorShadowTexture,
-                blending: THREE.NormalBlending,
-                opacity: 1,
-                offset: 5,
-            },
-            video: {
-                texture: this.videoTextures['video-1'],
-                blending: THREE.AdditiveBlending,
-                opacity: 0.5,
-                offset: 10,
-            },
-            video2: {
-                texture: this.videoTextures['video-2'],
-                blending: THREE.AdditiveBlending,
-                opacity: 0.1,
-                offset: 15,
-            },
-        };
+        // const layers = {
+        //     smudge: {
+        //         texture: textures.monitorSmudgeTexture,
+        //         blending: THREE.AdditiveBlending,
+        //         opacity: 0.12,
+        //         offset: 24,
+        //     },
+        //     innerShadow: {
+        //         texture: textures.monitorShadowTexture,
+        //         blending: THREE.NormalBlending,
+        //         opacity: 1,
+        //         offset: 5,
+        //     },
+        //     video: {
+        //         texture: this.videoTextures['video-1'],
+        //         blending: THREE.AdditiveBlending,
+        //         opacity: 0.5,
+        //         offset: 10,
+        //     },
+        //     video2: {
+        //         texture: this.videoTextures['video-2'],
+        //         blending: THREE.AdditiveBlending,
+        //         opacity: 0.1,
+        //         offset: 15,
+        //     },
+        // };
 
         // Declare max offset
-        let maxOffset = -1;
+        // let maxOffset = -1;
 
         // Add the texture layers to the screen
-        for (const [_, layer] of Object.entries(layers)) {
-            const offset = layer.offset * scaleFactor;
-            this.addTextureLayer(
-                layer.texture,
-                layer.blending,
-                layer.opacity,
-                offset
-            );
+        // for (const [_, layer] of Object.entries(layers)) {
+        //     const offset = layer.offset * scaleFactor;
+        //     this.addTextureLayer(
+        //         layer.texture,
+        //         layer.blending,
+        //         layer.opacity,
+        //         offset
+        //     );
             // Calculate the max offset
-            if (offset > maxOffset) maxOffset = offset;
-        }
+        //     if (offset > maxOffset) maxOffset = offset;
+        // }
 
         // Return the max offset
-        return maxOffset;
-    }
+    //     return maxOffset;
+    // }
 
-    getVideoTextures(videoId: string) {
-        const video = document.getElementById(videoId);
-        if (!video) {
-            setTimeout(() => {
-                this.getVideoTextures(videoId);
-            }, 100);
-        } else {
-            this.videoTextures[videoId] = new THREE.VideoTexture(
-                video as HTMLVideoElement
-            );
-        }
-    }
+    // getVideoTextures(videoId: string) {
+    //     const video = document.getElementById(videoId);
+    //     if (!video) {
+    //         setTimeout(() => {
+    //             this.getVideoTextures(videoId);
+    //         }, 100);
+    //     } else {
+    //         this.videoTextures[videoId] = new THREE.VideoTexture(
+    //             video as HTMLVideoElement
+    //         );
+    //     }
+    // }
 
     /**
      * Adds a texture layer to the screen

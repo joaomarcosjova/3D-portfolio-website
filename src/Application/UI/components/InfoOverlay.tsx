@@ -7,7 +7,7 @@ interface InfoOverlayProps {
 }
 
 const NAME_TEXT = 'Joao Marcos Jova';
-const TITLE_TEXT = 'Software Engineer';
+const TITLE_TEXT = 'Sercurity Engineer';
 const MULTIPLIER = 1;
 
 const InfoOverlay: React.FC<InfoOverlayProps> = ({ visible }) => {
